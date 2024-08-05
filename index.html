@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap">
+    <style>
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery-grid img {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal-dialog {
+            max-width: 90%;
+            margin: 1.75rem auto;
+        }
+
+        .modal-body img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section home">
+        <div class="container">
+            <h1>Welcome to Surabi Cipahit</h1>
+            <div class="logo1">
+                <img src="pic/beranda.png" alt="Logo" height="500">
+            </div><br>
+            <h4>Selamat datang di Surabi Cihapit, tempat di mana tradisi kuliner bertemu dengan kelezatan otentik yang telah terjaga sejak tahun 1993. Kami bangga menyajikan surabi khas Jawa Barat dengan cita rasa yang konsisten dan resep warisan turun-temurun, menghadirkan kenangan dan pengalaman rasa yang tak terlupakan di setiap gigitan.
+
+            Di sini, Anda tidak hanya menikmati hidangan lezat, tetapi juga merasakan sejarah panjang dari sebuah warisan kuliner yang telah melewati tiga generasi. Dengan beragam pilihan topping, mulai dari oncom hingga kinca gula merah, kami siap memanjakan lidah Anda dengan sentuhan modern tanpa menghilangkan keaslian rasa tradisional.
+            
+            Surabi Cihapit hadir untuk Anda yang mencari kehangatan kuliner dan keunikan rasa di setiap hidangan. Kami berkomitmen untuk terus memberikan yang terbaik, baik dalam pelayanan Dine In maupun layanan Online, memastikan Anda dapat menikmati kelezatan surabi kapan saja dan di mana saja.
+            
+            Jelajahi situs kami untuk menemukan lebih banyak tentang varian menu, promo spesial, dan cerita di balik setiap surabi yang kami sajikan. Terima kasih telah mengunjungi Surabi Cihapit, tempat di mana kenikmatan kuliner dan nilai tradisi bertemu.
+            
+            Selamat menikmati, dan jangan ragu untuk berbagi pengalaman Anda bersama kami!</h4>
+        </div>
+    </section>
+
+    <section id="about-us" class="section about-us">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="logo2">
+                <img src="pic/about_us.png" alt="Logo" height="500">
+            </div><br>
+            <h4>Surabi Cihapit adalah spot kuliner legendaris di Bandung yang telah berdiri sejak tahun 1993. Menawarkan serabi dengan rasa autentik, Surabi Cihapit telah menjadi favorit di kalangan pencinta kuliner. Dengan berbagai pilihan rasa mulai dari tradisional, manis, asin hingga pedas, Surabi Cihapit terus diminati hingga sekarang.</h4>
+        </div>
+    </section>
+
+    <section id="menu" class="section menu">
+        <div class="container">
+            <h2>Menu</h2>
+            <div class="logo">
+                <img src="pic/welcome.png" alt="Logo" height="500">
+            </div>
+            <h4>Selamat datang di bagian menu Surabi Cihapit, di mana kami menyajikan berbagai pilihan surabi yang menggugah selera, setiap gigitan menghadirkan cita rasa khas Jawa Barat yang tak tertandingi. Berikut adalah pilihan menu yang kami tawarkan:</h4>
+        </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="pic/surabi1.png" alt="Gallery Image 1" height="300px" data-toggle="modal" data-target="#imageModal" data-src="pic/surabi1.png">
+                <img src="pic/surabi2.png" alt="Gallery Image 2" height="300px"  data-toggle="modal" data-target="#imageModal" data-src="pic/surabi2.png">
+                <img src="pic/surabi3.png" alt="Gallery Image 3" height="300px"  data-toggle="modal" data-target="#imageModal" data-src="pic/surabi3.png">
+                <img src="pic/surabi4.png" alt="Gallery Image 4" height="300px"  data-toggle="modal" data-target="#imageModal" data-src="pic/surabi4.png">
+                <img src="pic/telur.png" alt="Gallery Image 3" height="300px"  data-toggle="modal" data-target="#imageModal" data-src="pic/telur.png">
+                <img src="pic/abon.png" alt="Gallery Image 4" height="300px"  data-toggle="modal" data-target="#imageModal" data-src="pic/abon.png">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="section contact-us">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Agil. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/yourphonenumber"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Surabi Cihapit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="modalImage" class="img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the modal element
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('modalImage');
+
+            // Add event listener to all images with data-toggle attribute
+            document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+                img.addEventListener('click', function() {
+                    var src = img.getAttribute('data-src');
+                    modalImg.src = src;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
